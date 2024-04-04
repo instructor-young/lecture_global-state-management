@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js는 라이브러리가 아니라, 프레임워크라고 부름
+제어역전이 발생하면 프레임워크라고 볼 수 있다.
 
-## Getting Started
+약속이 무엇이 있는지를 아는 게 무척 중요해요.
 
-First, run the development server:
+Next.js에서 딱 하나 알아야 하는 게 있다면,
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. App 디렉터리 아래에서는 디렉터리 경로가 곧 url 경로가 된다.
+2. 1번의 예외 케이스 두 가지를 알아야 한다.
+   1. 디렉터리명에 () 소괄호를 치는 경우 : 여전히 라우팅 시스템의 컨벤션들이 유효한 디렉터리
+   2. 디렉터리명 앞에 \_ 언더스코어를 치는 경우 : 라우팅 시스템 컨벤션에서 아예 제외되어버림
