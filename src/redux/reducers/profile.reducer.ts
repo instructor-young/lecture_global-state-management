@@ -24,8 +24,6 @@ const initialState: ProfileState = {
 function profileReducer(prevState = initialState, action: Action) {
   const nextState = { ...prevState };
 
-  console.log(prevState, action);
-
   switch (action.type) {
     case SET_PROFILE:
       const { id, nickname, description, avatarImgUrl } =
