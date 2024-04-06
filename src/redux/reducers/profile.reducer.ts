@@ -47,19 +47,17 @@ function profileReducer(prevState = initialState, action: Action) {
   return nextState;
 }
 
-export const setProfile = (profile: ProfileState) => ({
+const setProfile = (profile: ProfileState) => ({
   type: SET_PROFILE,
   payload: profile,
 });
 
-export const updateNickname = (nickname: string) => ({
+const updateNickname = (nickname: string) => ({
   type: UPDATE_NICKNAME,
   payload: nickname,
 });
 
-export const updateDescription = (description: string) => ({
+const updateDescription = (description: string) => ({
   type: UPDATE_DESCRIPTION,
   payload: description,
 });
-
-export default profileReducer;

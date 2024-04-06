@@ -1,7 +1,7 @@
 "use client";
 
 import initialProfile from "@/data/profile.json";
-import { ProfileState, setProfile } from "@/redux/reducers/profile.reducer";
+import { ProfileState, setProfile } from "@/redux/slices/profile.slice";
 import { useDispatch, useSelector } from "react-redux";
 
 function LogInButton() {
@@ -9,7 +9,7 @@ function LogInButton() {
   const profile = useSelector((state: any) => state.profile as ProfileState);
 
   const handleClickLogin = () => {
-    dispatch(setProfile(initialProfile) as any);
+    dispatch(setProfile(initialProfile));
   };
 
   if (profile.id) return null;
