@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HeaderProfile from "../HeaderProfile";
 import LogInButton from "../LogInButton";
+import ToggleThemeButton from "../ToggleThemeButton";
 
 function Header() {
   return (
@@ -12,6 +13,7 @@ function Header() {
 
         <div className="flex items-center gap-x-3">
           <HeaderProfile />
+          <ToggleThemeButton />
           <LogInButton />
         </div>
       </div>
